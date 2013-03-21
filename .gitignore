@@ -25,3 +25,6 @@ lib64
 
 # Installer logs
 pip-log.txt
+
+# Sublime
+.codeintel
