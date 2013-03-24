@@ -19,6 +19,9 @@ class AttendeeListImport(BaseModel):
         verbose_name = _('attendee list import')
         verbose_name_plural = _('attendee list imports')
 
+    def __unicode__(self):
+        return _('attendee list #%s' % self.id)
+
 
 class Ocupation(BaseModel):
     name = models.CharField(_('name'), max_length=255)
