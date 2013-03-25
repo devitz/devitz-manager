@@ -131,5 +131,6 @@ DEFAULT_FROM_EMAIL = 'Devitz [nao responda] <no-reply@devitz.com>'
 # Import optional settings
 try:
     from settings_dev import *
+    from settings_prod import *
 except ImportError:
     pass
