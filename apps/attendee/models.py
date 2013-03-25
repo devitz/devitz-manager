@@ -1,4 +1,7 @@
 from django.db import models
+from django.core import urlresolvers
+from django.core.mail import EmailMessage
+from django.contrib.sites.models import Site
 from django.contrib.auth.models import AbstractUser
 from django.utils.translation import ugettext_lazy as _
 
@@ -51,6 +54,15 @@ class Attendee(AbstractUser):
     ocupations = models.ManyToManyField(Ocupation, verbose_name=_('ocupations'), null=True)
     confirmed = models.BooleanField(_('confirmed'))
     present = models.BooleanField(_('present'))
+
+    def email_user(self, subject, message, from_email=None):
+        msg = EmailMessage(subject, message, from_email, [self.email])
+        msg.content_subtype = "html"
+        msg.send()
+
+    def get_confirmation_url(self):
+        site = Site.objects.get_current()
+        return "http://%s%s" % (site.domain, urlresolvers.reverse('attendee_attendee_confirm', args=[self.username]))
 
 
 models.signals.post_save.connect(import_attendee_from_list, sender=AttendeeListImport)

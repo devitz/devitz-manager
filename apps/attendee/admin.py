@@ -1,6 +1,8 @@
 from django.contrib import admin
+from django.http import HttpResponseRedirect
+from django.conf.urls import patterns
+from django.template.loader import render_to_string
 from django.contrib.auth.admin import UserAdmin
-from django.contrib.auth.forms import UserChangeForm
 from django.utils.translation import ugettext_lazy as _
 
 from .forms  import AttendeeUserChangeForm
@@ -34,6 +36,27 @@ class AttendeeUserAdmin(UserAdmin):
                                                              'present')}
                     ),
                 )
+
+
+    def get_urls(self):
+        urls = super(AttendeeUserAdmin, self).get_urls()
+        extra_urls = patterns('',
+            (r'^send-confirmation-mail/$', self.send_confirmation_mail_view),
+
+        )
+        return extra_urls + urls
+
+    def send_confirmation_mail_view(self, request):
+        queryset = self.model.objects.filter(confirmed=False, attendee_type__name='Participante')
+
+        for user_obj in queryset:
+            context = {'user': user_obj}
+            subject = render_to_string('attendee/mail/account_confirmation_subject.txt', context)
+            message = render_to_string('attendee/mail/account_confirmation_body.html', context)
+            user_obj.email_user(subject, message)
+
+        return HttpResponseRedirect('../')
+
 
 
 admin.site.register(Ocupation, OcupationAdmin)

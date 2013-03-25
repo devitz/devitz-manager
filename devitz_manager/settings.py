@@ -125,6 +125,9 @@ LOGGING = {
 # User
 AUTH_USER_MODEL = 'attendee.Attendee'
 
+# Email
+DEFAULT_FROM_EMAIL = 'Devitz [nao responda] <no-reply@devitz.com>'
+
 # Import optional settings
 try:
     from settings_dev import *
