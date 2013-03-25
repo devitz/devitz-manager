@@ -19,7 +19,8 @@ MANAGERS = ADMINS
 
 # Site
 SITE_ID = 1
-SECRET_KEY = "j*c!wkgy9=&ra@=r%zn_shysr!faxtm-+)057=p$jh5kpzm992"
+SECRET_KEY = r"j*c!wkgy9=&ra@=r%zn_shysr!faxtm-+)057=p$jh5kpzm992"
+ALLOWED_HOSTS = ('127.0.0.1', )
 
 # Internationalization
 TIME_ZONE = 'America/Araguaina'
