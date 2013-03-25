@@ -10,4 +10,4 @@ def confirm_account_view(request, key):
     user_obj.confirmed = True
     user_obj.save()
 
-    return HttpResponseRedirect('http://devitz.com?confirmated=%s' % user_obj.first_name)
+    return HttpResponseRedirect('http://devitz.com?confirmed=%s' % user_obj.first_name)

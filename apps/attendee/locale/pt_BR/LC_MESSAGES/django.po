@@ -98,11 +98,11 @@ msgstr[1] ""
 msgid "Filter"
 msgstr "Filtrar"
 
-#: templates/attendee/attendee_account_confirmated.html:6
+#: templates/attendee/attendee_account_confirmed.html:6
 msgid "Their presence was confirmed successfully!"
 msgstr "Sua presença foi confirmada com sucesso!"
 
-#: templates/attendee/attendee_account_confirmated.html:8
+#: templates/attendee/attendee_account_confirmed.html:8
 msgid "now your entry is guaranteed, do not forget, is April 6 from 08:30 am. We'll be waiting!"
 msgstr "agora a sua entrada está garantida, não esqueça, será dia 6 de abril a partir das 08:30 da manhã. Estaremos esperando!"
 
