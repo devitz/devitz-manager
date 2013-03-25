@@ -1,8 +1,31 @@
-<h1>DEVITZ</h1>
-<p>Hello dev, este é o email de confirmação de presença, for favor, clique no link abaixo para confirmar a sua presença </p>
+<html>
+<head>
+  <title></title>
+</head>
+<body style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;">
+  <div class="container" style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;width: 600px;">
+    <div class="header" style="padding: 20px 0;margin: 0;font-family: helvetica, arial, sans-serif;background: #000;text-align: center;">
+      <h1 style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;color: #fff;font-size: 82px;font-weight: 700;letter-spacing: -4px;">#devitz</h1>
+      <p style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;color: #fff;font-size: 12px;">6 de Abril, Imperatriz - MA</p>
+    </div>
 
-<p><a href="{{ user.get_confirmation_url }}">EU VOU!</a></p>
+    <div class="content" style="padding: 20px;margin: 0;font-family: helvetica, arial, sans-serif;background: #F1F1F1;font-size: 12px;">
+      <p style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;">
+        {% trans "Hello dev, this is the email confirmation of attendance, please click the link below to confirm your attendance:" %}
+      </p>
 
-<br />
+      <br />
 
-<p>Lembrando que este é o seu passaporte para o Devitz 2013, caso não confirme sua presença, você não terá acesso ao evento.</p>
+      <p class="btn-wrapper" style="padding: 20px 0;margin: 10px;font-family: helvetica, arial, sans-serif;background: #E7E7E7;text-align: center;"><a href="{{ user.get_confirmation_url }}" style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;font-size: 12px;text-decoration: none;color: #505050;">{% trans "I WILL!" %}</a></p>
+    </div>
+
+    <div class="footer" style="padding: 20px;margin: 0;font-family: helvetica, arial, sans-serif;font-size: 11px;background: #CECECE;color: #6B6B6B;">
+      <p style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;">{% trans "This is your passport to Devitz 2013, if not confirm its presence, you will not have access to the event." %}</p>
+
+      <div class="links" style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;text-align: center;">
+        <a href="http://devitz.com" style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;color: #214F87;">Devitz.com</a> | <span style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;">Copyright © 2013</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

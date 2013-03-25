@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-21 16:12-0300\n"
-"PO-Revision-Date: 2013-03-21 16:13-0300\n"
+"POT-Creation-Date: 2013-03-25 09:27-0300\n"
+"PO-Revision-Date: 2013-03-25 09:29-0300\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,51 +17,100 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: admin.py:30
+#: admin.py:33
 msgid "Attendee Informations"
 msgstr "Informaçãos do Participante"
 
-#: models.py:16
+#: admin.py:63
+#, python-format
+msgid "%s email sent"
+msgstr "%s email enviado"
+
+#: models.py:19
 msgid "list file"
 msgstr "arquivo de lista"
 
-#: models.py:19
+#: models.py:22
 msgid "attendee list import"
 msgstr "importação de lista de participante"
 
-#: models.py:20
+#: models.py:23
 msgid "attendee list imports"
 msgstr "importações de lista de participantes"
 
-#: models.py:24
-#: models.py:35
+#: models.py:26
+#, python-format
+msgid "attendee list #%s"
+msgstr "lista de participantes #%s"
+
+#: models.py:30
+#: models.py:41
 msgid "name"
 msgstr "nome"
 
-#: models.py:27
-#: models.py:28
+#: models.py:33
+#: models.py:34
 msgid "ocupation"
 msgstr "ocupação"
 
-#: models.py:38
-#: models.py:39
-#: models.py:46
+#: models.py:44
+#: models.py:45
+#: models.py:52
 msgid "attendee type"
 msgstr "tipo de participante"
 
-#: models.py:47
+#: models.py:53
 msgid "institution"
 msgstr "instituição"
 
-#: models.py:48
+#: models.py:54
 msgid "ocupations"
 msgstr "ocupações"
 
-#: models.py:49
+#: models.py:55
 msgid "confirmed"
 msgstr "confirmado"
 
-#: models.py:50
+#: models.py:56
 msgid "present"
 msgstr "presente"
+
+#: templates/admin/attendee/attendee/change_list.html:41
+msgid "Home"
+msgstr "Principal"
+
+#: templates/admin/attendee/attendee/change_list.html:57
+msgid "Send confirmation mail"
+msgstr "Enviar email de confirmação"
+
+#: templates/admin/attendee/attendee/change_list.html:63
+#, python-format
+msgid "Add %(name)s"
+msgstr "Adicionar %(name)s"
+
+#: templates/admin/attendee/attendee/change_list.html:72
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "Por favor, corrija os erros abaixo."
+msgstr[1] ""
+
+#: templates/admin/attendee/attendee/change_list.html:83
+msgid "Filter"
+msgstr "Filtrar"
+
+#: templates/attendee/mail/account_confirmation_body.html:14
+msgid "Hello dev, this is the email confirmation of attendance, please click the link below to confirm your attendance:"
+msgstr "Olá dev, este é o email de confirmação de presença, por favor, clique no link abaixo para confirmar a sua presença:"
+
+#: templates/attendee/mail/account_confirmation_body.html:19
+msgid "I WILL!"
+msgstr "EU VOU!"
+
+#: templates/attendee/mail/account_confirmation_body.html:23
+msgid "This is your passport to Devitz 2013, if not confirm its presence, you will not have access to the event."
+msgstr "Este é o seu passaporte para o Devitz 2013, caso não confirme sua presença, você não terá acesso ao evento."
+
+#: templates/attendee/mail/account_confirmation_subject.txt:1
+msgid "Presence confirmation mail"
+msgstr "Email de confirmação de presença"
 
