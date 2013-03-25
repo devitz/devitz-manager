@@ -17,18 +17,6 @@ ADMINS = (
 )
 MANAGERS = ADMINS
 
-# Database
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',
-        'PORT': '',
-    }
-}
-
 # Site
 SITE_ID = 1
 SECRET_KEY = "j*c!wkgy9=&ra@=r%zn_shysr!faxtm-+)057=p$jh5kpzm992"
