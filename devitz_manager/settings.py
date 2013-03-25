@@ -95,6 +95,7 @@ INSTALLED_APPS = (
 
     # Project Apps
     'apps.attendee',
+    'apps.page',
 
     # Third-party Apps
     'south'

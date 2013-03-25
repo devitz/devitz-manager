@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-25 09:27-0300\n"
-"PO-Revision-Date: 2013-03-25 09:29-0300\n"
+"POT-Creation-Date: 2013-03-25 10:24-0300\n"
+"PO-Revision-Date: 2013-03-25 10:24-0300\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -98,15 +98,23 @@ msgstr[1] ""
 msgid "Filter"
 msgstr "Filtrar"
 
-#: templates/attendee/mail/account_confirmation_body.html:14
+#: templates/attendee/attendee_account_confirmated.html:6
+msgid "Their presence was confirmed successfully!"
+msgstr "Sua presença foi confirmada com sucesso!"
+
+#: templates/attendee/attendee_account_confirmated.html:8
+msgid "now your entry is guaranteed, do not forget, is April 6 from 08:30 am. We'll be waiting!"
+msgstr "agora a sua entrada está garantida, não esqueça, será dia 6 de abril a partir das 08:30 da manhã. Estaremos esperando!"
+
+#: templates/attendee/mail/account_confirmation_body.html:15
 msgid "Hello dev, this is the email confirmation of attendance, please click the link below to confirm your attendance:"
 msgstr "Olá dev, este é o email de confirmação de presença, por favor, clique no link abaixo para confirmar a sua presença:"
 
-#: templates/attendee/mail/account_confirmation_body.html:19
+#: templates/attendee/mail/account_confirmation_body.html:20
 msgid "I WILL!"
 msgstr "EU VOU!"
 
-#: templates/attendee/mail/account_confirmation_body.html:23
+#: templates/attendee/mail/account_confirmation_body.html:24
 msgid "This is your passport to Devitz 2013, if not confirm its presence, you will not have access to the event."
 msgstr "Este é o seu passaporte para o Devitz 2013, caso não confirme sua presença, você não terá acesso ao evento."
 
