@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.conf.urls import patterns
 from django.template.loader import render_to_string
@@ -49,11 +50,17 @@ class AttendeeUserAdmin(UserAdmin):
     def send_confirmation_mail_view(self, request):
         queryset = self.model.objects.filter(confirmed=False, attendee_type__name='Participante')
 
+        email_sent_count = 0
+
         for user_obj in queryset:
             context = {'user': user_obj}
             subject = render_to_string('attendee/mail/account_confirmation_subject.txt', context)
             message = render_to_string('attendee/mail/account_confirmation_body.html', context)
-            user_obj.email_user(subject, message)
+
+            if user_obj.email_user(subject, message):
+                email_sent_count += 1
+
+        messages.success(request, _('%s email sent' % email_sent_count))
 
         return HttpResponseRedirect('../')
 

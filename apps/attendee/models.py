@@ -58,7 +58,7 @@ class Attendee(AbstractUser):
     def email_user(self, subject, message, from_email=None):
         msg = EmailMessage(subject, message, from_email, [self.email])
         msg.content_subtype = "html"
-        msg.send()
+        return msg.send()
 
     def get_confirmation_url(self):
         site = Site.objects.get_current()
