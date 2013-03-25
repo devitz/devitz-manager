@@ -7,21 +7,7 @@
 # Python
 *.py[cod]
 *_dev.py
-
-# Packages
-*.egg
-*.egg-info
-dist
-build
-eggs
-parts
-bin
-var
-sdist
-develop-eggs
-.installed.cfg
-lib
-lib64
+build/
 
 # Installer logs
 pip-log.txt
