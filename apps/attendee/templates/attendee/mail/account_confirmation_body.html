@@ -21,9 +21,18 @@
                     {% trans "Hello dev, this is the email confirmation of attendance, please click the link below to confirm your attendance:" %}
                   </p>
 
+                  <br /><br />
+
+                  <p style="text-align: center;">
+                    <img src="http://in.devitz.com/arrow_down_1.png" />
+                  </p>
+
                   <br />
 
-                  <p class="btn-wrapper" style="padding: 20px 0;margin: 10px;font-family: helvetica, arial, sans-serif;background: #E7E7E7;text-align: center;"><a href="{{ user.get_confirmation_url }}" style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;font-size: 12px;text-decoration: none;color: #505050;">{% trans "I WILL!" %}</a></p>
+                  <p class="btn-wrapper" style="text-align:center" ><a style="padding: 20px 30px;font-family: helvetica, arial, sans-serif;background: #FF8700;text-align: center; color: #fff; font-weight: 700; font-size: 24px;" href="{{ user.get_confirmation_url }}" style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;font-size: 12px;text-decoration: none;color: #505050;">{% trans "CLICK HERE TO CONFIRM" %}</a></p>
+
+                  <br />
+                  <br />
                 </div>
 
                 <div class="footer" style="padding: 20px;margin: 0;font-family: helvetica, arial, sans-serif;font-size: 11px;background: #CECECE;color: #6B6B6B;">

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-25 10:24-0300\n"
-"PO-Revision-Date: 2013-03-25 10:24-0300\n"
+"POT-Creation-Date: 2013-03-26 17:46-0300\n"
+"PO-Revision-Date: 2013-03-26 17:46-0300\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: admin.py:33
+#: admin.py:34
 msgid "Attendee Informations"
 msgstr "Informaçãos do Participante"
 
-#: admin.py:63
+#: admin.py:64
 #, python-format
 msgid "%s email sent"
 msgstr "%s email enviado"
@@ -91,34 +91,37 @@ msgstr "Adicionar %(name)s"
 #: templates/admin/attendee/attendee/change_list.html:72
 msgid "Please correct the error below."
 msgid_plural "Please correct the errors below."
-msgstr[0] "Por favor, corrija os erros abaixo."
-msgstr[1] ""
+msgstr[0] "Por favor, corrija o erro abaixo."
+msgstr[1] "Por favor, corrija os erros abaixo."
 
 #: templates/admin/attendee/attendee/change_list.html:83
 msgid "Filter"
 msgstr "Filtrar"
 
-#: templates/attendee/attendee_account_confirmed.html:6
-msgid "Their presence was confirmed successfully!"
-msgstr "Sua presença foi confirmada com sucesso!"
-
-#: templates/attendee/attendee_account_confirmed.html:8
-msgid "now your entry is guaranteed, do not forget, is April 6 from 08:30 am. We'll be waiting!"
-msgstr "agora a sua entrada está garantida, não esqueça, será dia 6 de abril a partir das 08:30 da manhã. Estaremos esperando!"
-
-#: templates/attendee/mail/account_confirmation_body.html:15
+#: templates/attendee/mail/account_confirmation_body.html:21
 msgid "Hello dev, this is the email confirmation of attendance, please click the link below to confirm your attendance:"
 msgstr "Olá dev, este é o email de confirmação de presença, por favor, clique no link abaixo para confirmar a sua presença:"
 
-#: templates/attendee/mail/account_confirmation_body.html:20
-msgid "I WILL!"
-msgstr "EU VOU!"
+#: templates/attendee/mail/account_confirmation_body.html:32
+msgid "CLICK HERE TO CONFIRM"
+msgstr "CLIQUE AQUI PARA CONFIRMAR"
 
-#: templates/attendee/mail/account_confirmation_body.html:24
+#: templates/attendee/mail/account_confirmation_body.html:39
 msgid "This is your passport to Devitz 2013, if not confirm its presence, you will not have access to the event."
 msgstr "Este é o seu passaporte para o Devitz 2013, caso não confirme sua presença, você não terá acesso ao evento."
 
 #: templates/attendee/mail/account_confirmation_subject.txt:1
 msgid "Presence confirmation mail"
 msgstr "Email de confirmação de presença"
+
+#~ msgid "Their presence was confirmed successfully!"
+#~ msgstr "Sua presença foi confirmada com sucesso!"
+#~ msgid ""
+#~ "now your entry is guaranteed, do not forget, is April 6 from 08:30 am. "
+#~ "We'll be waiting!"
+#~ msgstr ""
+#~ "agora a sua entrada está garantida, não esqueça, será dia 6 de abril a "
+#~ "partir das 08:30 da manhã. Estaremos esperando!"
+#~ msgid "I WILL!"
+#~ msgstr "EU VOU!"
 
