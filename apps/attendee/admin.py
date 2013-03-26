@@ -29,6 +29,7 @@ class AttendeeUserAdmin(UserAdmin):
     form = AttendeeUserChangeForm
     list_display = UserAdmin.list_display + ('attendee_type', 'confirmed', 'present')
     list_editable = UserAdmin.list_editable + ('confirmed', 'present')
+    list_filter = UserAdmin.list_filter + ('confirmed', 'present')
     fieldsets = UserAdmin.fieldsets + (
                     (_('Attendee Informations'), {'fields': ('attendee_type',
                                                              'institution',
