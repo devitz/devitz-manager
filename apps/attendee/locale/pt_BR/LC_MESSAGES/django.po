@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-27 11:32-0300\n"
-"PO-Revision-Date: 2013-03-27 11:33-0300\n"
+"POT-Creation-Date: 2013-03-27 11:56-0300\n"
+"PO-Revision-Date: 2013-03-27 11:56-0300\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -115,8 +115,8 @@ msgid "This is your passport to Devitz 2013, if not confirm its presence, you wi
 msgstr "Este é o seu passaporte para o Devitz 2013, caso não confirme sua presença, você não terá acesso ao evento."
 
 #: templates/attendee/mail/account_confirmation_subject.txt:1
-msgid "Reminder - Presence confirmation mail"
-msgstr "Lembrete - Email de confirmação de presença"
+msgid "Last chance - Presence confirmation mail"
+msgstr "Última chance - Email de confirmação de presença"
 
 #~ msgid "Their presence was confirmed successfully!"
 #~ msgstr "Sua presença foi confirmada com sucesso!"

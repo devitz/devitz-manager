@@ -1,1 +1,1 @@
-{% load i18n %}{% trans "Reminder - Presence confirmation mail" %}
+{% load i18n %}{% trans "Last chance - Presence confirmation mail" %}
