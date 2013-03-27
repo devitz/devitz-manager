@@ -62,7 +62,7 @@ class Attendee(AbstractUser):
 
     def get_confirmation_url(self):
         site = Site.objects.get_current()
-        return "http://%s%s" % (site.domain, urlresolvers.reverse('attendee_attendee_confirm', args=[self.username]))
+        return "http://in.devitz.com/confirm-account/%s/" % self.username
 
 
 models.signals.post_save.connect(import_attendee_from_list, sender=AttendeeListImport)

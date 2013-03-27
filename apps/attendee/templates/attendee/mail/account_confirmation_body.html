@@ -23,16 +23,17 @@
 
                   <br /><br />
 
-                  <p style="text-align: center;">
-                    <img src="http://in.devitz.com/arrow_down_1.png" />
-                  </p>
-
-                  <br />
-
-                  <p class="btn-wrapper" style="text-align:center" ><a style="padding: 20px 30px;font-family: helvetica, arial, sans-serif;background: #FF8700;text-align: center; color: #fff; font-weight: 700; font-size: 24px;" href="{{ user.get_confirmation_url }}" style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;font-size: 12px;text-decoration: none;color: #505050;">{% trans "CLICK HERE TO CONFIRM" %}</a></p>
+                  <p class="btn-wrapper" style="text-align:center" >
+                    <a style="padding: 20px 30px;font-family: helvetica, arial, sans-serif;background: #FF8700;text-align: center; color: #fff; font-weight: 700; font-size: 24px;" href="{{ user.get_confirmation_url }}" style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif;font-size: 12px;text-decoration: none;color: #505050;">{% trans "CLICK HERE TO CONFIRM" %}</a></p>
 
                   <br />
                   <br />
+
+                  <div style="background: #D4D4D4; padding: 20px; margin: 10px 40px;">
+                    <p style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif; text-align: center; font-size: 11px;">{% trans "If you are having difficulty, please copy and paste the link below into your browser:" %}</p>
+                    <br />
+                    <p style="padding: 0;margin: 0;font-family: helvetica, arial, sans-serif; text-align: center;">{{ user.get_confirmation_url }}</p>
+                  </div>
                 </div>
 
                 <div class="footer" style="padding: 20px;margin: 0;font-family: helvetica, arial, sans-serif;font-size: 11px;background: #CECECE;color: #6B6B6B;">

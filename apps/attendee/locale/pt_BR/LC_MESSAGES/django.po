@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-26 17:53-0300\n"
-"PO-Revision-Date: 2013-03-26 17:53-0300\n"
+"POT-Creation-Date: 2013-03-27 11:32-0300\n"
+"PO-Revision-Date: 2013-03-27 11:33-0300\n"
 "Last-Translator: \n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -102,11 +102,15 @@ msgstr "Filtrar"
 msgid "Hello dev, this is the email confirmation of attendance, please click the link below to confirm your attendance:"
 msgstr "Olá dev, este é o email de confirmação de presença, por favor, clique no link abaixo para confirmar a sua presença:"
 
-#: templates/attendee/mail/account_confirmation_body.html:32
+#: templates/attendee/mail/account_confirmation_body.html:27
 msgid "CLICK HERE TO CONFIRM"
 msgstr "CLIQUE AQUI PARA CONFIRMAR"
 
-#: templates/attendee/mail/account_confirmation_body.html:39
+#: templates/attendee/mail/account_confirmation_body.html:33
+msgid "If you are having difficulty, please copy and paste the link below into your browser:"
+msgstr "Caso esteja com dificuldade, copie e cole o link abaixo em seu navegador"
+
+#: templates/attendee/mail/account_confirmation_body.html:40
 msgid "This is your passport to Devitz 2013, if not confirm its presence, you will not have access to the event."
 msgstr "Este é o seu passaporte para o Devitz 2013, caso não confirme sua presença, você não terá acesso ao evento."
 
