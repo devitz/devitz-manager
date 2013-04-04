@@ -39,6 +39,8 @@ def import_attendee_from_list(sender, instance, created, raw, using, update_fiel
                     user_obj.first_name = first_name
                     user_obj.last_name = last_name
                     user_obj.institution = csv_line['institution']
+                    user_obj.confirmed = instance.confirmed
+                    user_obj.present = instance.present
                     user_obj.attendee_type, created = AttendeeType.objects.get_or_create(name='Participante')
 
                     user_obj.save()

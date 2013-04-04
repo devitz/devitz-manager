@@ -53,10 +53,17 @@
       {% if has_add_permission %}
         <ul class="object-tools">
           <li>
+            <a href="export-csv/" class="addlink">
+              {% trans "Export CSV" %}
+            </a>
+          </li>
+
+          <li>
             <a href="send-confirmation-mail/" class="addlink">
               {% trans "Send confirmation mail" %}
             </a>
           </li>
+
           {% block object-tools-items %}
             <li>
               <a href="{% url cl.opts|admin_urlname:'add' %}{% if is_popup %}?_popup=1{% endif %}" class="addlink">

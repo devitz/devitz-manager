@@ -1,5 +1,8 @@
+import csv 
+
 from django.contrib import admin
 from django.contrib import messages
+from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.conf.urls import patterns
 from django.template.loader import render_to_string
@@ -44,7 +47,7 @@ class AttendeeUserAdmin(UserAdmin):
         urls = super(AttendeeUserAdmin, self).get_urls()
         extra_urls = patterns('',
             (r'^send-confirmation-mail/$', self.send_confirmation_mail_view),
-
+            (r'^export-csv/$', self.export_attendee_list_to_csv_view),
         )
         return extra_urls + urls
 
@@ -65,6 +68,24 @@ class AttendeeUserAdmin(UserAdmin):
 
         return HttpResponseRedirect('../')
 
+
+    def export_attendee_list_to_csv_view(self, request):
+        queryset = self.model.objects.filter(confirmed=True, attendee_type__name='Participante').order_by('first_name')
+        
+        response = HttpResponse(mimetype='text/csv')
+        response['Content-Disposition'] = 'attachment;filename="export.csv"'
+
+        writer = csv.writer(response)
+
+        for attendee_obj in queryset:
+            ocupations = " ,".join(attendee_obj.ocupations.values_list('name', flat=True))
+
+            writer.writerow([unicode(attendee_obj.get_full_name()).encode('utf-8'), 
+                             attendee_obj.email, 
+                             unicode(attendee_obj.institution).encode('utf-8'), 
+                             ocupations])
+
+        return response
 
 
 admin.site.register(Ocupation, OcupationAdmin)

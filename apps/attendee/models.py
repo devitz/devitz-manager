@@ -17,6 +17,9 @@ class BaseModel(models.Model):
 
 class AttendeeListImport(BaseModel):
     list_file = models.FileField(_('list file'), upload_to='attendee/list_import/')
+    confirmed = models.BooleanField(_('confirmed'))
+    present = models.BooleanField(_('present'))
+
 
     class Meta:
         verbose_name = _('attendee list import')

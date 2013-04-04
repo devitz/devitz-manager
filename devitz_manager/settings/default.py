@@ -1,7 +1,7 @@
 import os
 
 # Project information
-PROJECT_PATH = os.path.realpath(os.path.dirname(__file__)+'/../')
+PROJECT_PATH = os.path.realpath(os.path.dirname(__file__)+'/../../')
 PROJECT_NAME = os.path.basename(PROJECT_PATH)
 
 # Helpers
@@ -130,16 +130,3 @@ AUTH_USER_MODEL = 'attendee.Attendee'
 
 # Email
 DEFAULT_FROM_EMAIL = 'Devitz [nao responda] <no-reply@devitz.com>'
-
-# Import production settings
-try:
-    from settings_prod import *
-except:
-    pass
-
-# Import optional settings
-try:
-    from settings_dev import *
-    
-except ImportError:
-    pass
