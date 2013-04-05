@@ -1,8 +1,11 @@
+import sys
 import os
 
 # Project information
 PROJECT_PATH = os.path.realpath(os.path.dirname(__file__)+'/../../')
 PROJECT_NAME = os.path.basename(PROJECT_PATH)
+
+sys.path.insert(1, PROJECT_PATH)
 
 # Helpers
 path = lambda *p: os.path.join(PROJECT_PATH, *p)
