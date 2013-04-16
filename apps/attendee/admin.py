@@ -70,7 +70,10 @@ class AttendeeUserAdmin(UserAdmin):
 
 
     def export_attendee_list_to_csv_view(self, request):
-        queryset = self.model.objects.filter(confirmed=True, attendee_type__name='Participante').order_by('first_name')
+        queryset = self.model.objects.all()
+
+        if request.GET:
+            queryset = queryset.filter(**request.GET.dict())
         
         response = HttpResponse(mimetype='text/csv')
         response['Content-Disposition'] = 'attachment;filename="export.csv"'

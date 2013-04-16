@@ -53,7 +53,7 @@
       {% if has_add_permission %}
         <ul class="object-tools">
           <li>
-            <a href="export-csv/" class="addlink">
+            <a href="export-csv/?{{ request.GET.urlencode }}" class="addlink">
               {% trans "Export CSV" %}
             </a>
           </li>
